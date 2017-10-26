@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SimpleDial:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SimpleDial.war">
+      <element id="artifact" artifact-name="SimpleDial:war exploded" />
+    </root>
+  </artifact>
+</component>

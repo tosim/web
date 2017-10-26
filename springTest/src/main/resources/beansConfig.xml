@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--加载properties配置文件 START-->
+    <!--通过标签的方式加载-->
+    <!--<context:property-placeholder location="classpath:prop.properties"/>-->
+
+    <!--通过bean类的方式加载配置文件-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations"> <!-- PropertyPlaceholderConfigurer类中有个locations属性，接收的是一个数组，即我们可以在下面配好多个properties文件 -->
+            <array>
+                <value>classpath:prop.properties</value>
+            </array>
+        </property>
+    </bean>
+    <!--加载properties配置文件 END-->
+
+    <!--开启自动扫描组件-->
+    <context:component-scan base-package="top.tosim"/>
+
+    <!--开启AspectJ 自动代理，会为切面类进行自动代理-->
+    <aop:aspectj-autoproxy/>
+
+    <!--<bean id="person"-->
+          <!--class="top.tosim.impl.PersonImpl" autowire="byType">-->
+        <!--<property name="name" value="${name}"/>-->
+        <!--&lt;!&ndash;<property name="phone" ref="phone"/>&ndash;&gt;-->
+        <!--<property name="type" value="guest"/>-->
+    <!--</bean>-->
+    <!--<bean id="phone"-->
+          <!--class="top.tosim.impl.PhoneImpl">-->
+        <!--<property name="phoneType" value="HTC g14"/>-->
+    <!--</bean>-->
+</beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- ORM元数据  表对象关系映射文件
+    package : 配置该配置文件中类所在的包.  -->
+
+<hibernate-mapping package="top.tosim.orm.entity" >
+    <class name="User" table="user"  >
+        <id name="id" column="id">
+            <generator class="identity"></generator>
+        </id>
+        <property name="username" column="username"/>
+        <property name="name" column="name"/>
+        <property name="intro"/>
+        <property name="gender"/>
+        <property name="province"/>
+        <property name="city"/>
+        <property name="regist_time"/>
+        <property name="type"/>
+        <property name="email"/>
+        <property name="mobile"/>
+        <property name="qq"/>
+        <property name="status"/>
+        <set name="pictures" inverse="true" cascade="all">
+            <key>
+                <column name="user_id"/>
+            </key>
+            <one-to-many class="Picture"/>
+        </set>
+        <!--我关注的人-->
+        <set name="concerners" table="concern">
+            <!--与本表对应的，在关联表中的字段-->
+            <key column="concerner_id"/>
+            <!--需要找到的对象，关联表中的字段与之对应-->
+            <many-to-many class="top.tosim.orm.entity.User" column="concerned_id"/>
+        </set>
+        <!--关注我的人-->
+        <set name="concerneds" table="concern">
+            <key column="concerned_id"/>
+            <many-to-many class="top.tosim.orm.entity.User" column="concerner_id"/>
+        </set>
+    </class>
+</hibernate-mapping>
+
