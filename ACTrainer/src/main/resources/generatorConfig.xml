@@ -14,7 +14,7 @@
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/user_t"
+                        connectionURL="jdbc:mysql://localhost:3306/actrainer"
                         userId="root"
                         password="056210">
         </jdbcConnection>
@@ -50,14 +50,32 @@
         </javaClientGenerator>
 
         <!-- 指定数据库表 -->
-        <table schema="user_t" tableName="user_t" domainObjectName="User" mapperName="UserDao"
+        <!--<table schema="actrainer" tableName="problem" domainObjectName="Problem" mapperName="ProblemDao"-->
+               <!--enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<columnOverride column="description" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--<columnOverride column="input" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--<columnOverride column="output" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--<columnOverride column="sample_input" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--<columnOverride column="sample_output" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--<columnOverride column="hint" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--&lt;!&ndash;使用与数据库字段相同的属性名&ndash;&gt;-->
+            <!--&lt;!&ndash;<property name="useActualColumnNames" value="true"/>&ndash;&gt;-->
+        <!--</table>-->
+        <table schema="actrainer" tableName="submission" domainObjectName="Submission" mapperName="SubmissionDao"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false">
+            <columnOverride column="source" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <columnOverride column="compilation_error_info" javaType="java.lang.String" jdbcType="VARCHAR" />
             <!--使用与数据库字段相同的属性名-->
             <!--<property name="useActualColumnNames" value="true"/>-->
         </table>
+
     </context>
 </generatorConfiguration>

@@ -14,6 +14,7 @@
   <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
+<%--${applicationScope.userList}--%>
   <div class="layui-container">
     <div class="layui-row">
       <div class="layui-col-md3">
