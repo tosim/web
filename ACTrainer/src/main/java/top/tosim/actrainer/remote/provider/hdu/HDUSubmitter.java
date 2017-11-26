@@ -2,8 +2,13 @@ package top.tosim.actrainer.remote.provider.hdu;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sun.rmi.runtime.Log;
 import top.tosim.actrainer.config.init.SubmissionManager;
 import top.tosim.actrainer.dao.SubmissionDao;
+import top.tosim.actrainer.dao.UserDao;
+import top.tosim.actrainer.dto.SubmissionStatus;
 import top.tosim.actrainer.entity.Submission;
 import top.tosim.actrainer.httpclient.DedicatedHttpClient;
 import top.tosim.actrainer.remote.RemoteOJ;
@@ -16,14 +21,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HDUSubmitter implements Submitter,Runnable{
+    Logger log = LoggerFactory.getLogger(HDUSubmitter.class);
+
     private DedicatedHttpClient client = HDUHelper.getClient(); //HDU网络请求对象
     private String loginCookie;                                 //提交者对应的cookie，失效自动更新
     private String userName;                                    //提交者账号
     private String password;                                    //提交者密码
     private Integer failedSubmitCount;                          //连续提交失败次数，用于是否重新登录
     private SubmissionDao submissionDao;                        //数据库操作对象
+    private UserDao userDao;
 
-    public HDUSubmitter(String userName,String password,SubmissionDao submissionDao) {
+    public HDUSubmitter(String userName, String password, SubmissionDao submissionDao, UserDao userDao) {
         this.submissionDao = submissionDao;
         this.failedSubmitCount = 0;
         this.userName = userName;
@@ -35,7 +43,7 @@ public class HDUSubmitter implements Submitter,Runnable{
         List<NameValuePair> formParams = new ArrayList<NameValuePair>();
         formParams.add(new BasicNameValuePair("check","0"));
         formParams.add(new BasicNameValuePair("problemid",submission.getRemoteProblemId()));
-        formParams.add(new BasicNameValuePair("language",submission.getLanguage()));
+        formParams.add(new BasicNameValuePair("language",submission.getLanguageCode()));
         formParams.add(new BasicNameValuePair("usercode",submission.getSource()));
         if(null == client.postForm(HDUHelper.getSubmitUrl(),formParams,loginCookie) ){ return -1;}
         //考虑在这边加上延迟，删去下面数据库查重操作，但是这样不准确哦
@@ -60,20 +68,20 @@ public class HDUSubmitter implements Submitter,Runnable{
                 //如果提交失败
                 //这里对于每次提交至少检查一遍数据库，性能考虑
                 //防止没有提交上去，但是查询到了这个远程用户对于这道题的另一个用户之前的提交记录
+                int submissionFailedSubmitCount = 0;
                 while(runId == -1 || null != submissionDao.selectByOJAndRealRunId(RemoteOJ.HDU.name(),runId) ){
                     System.out.println("submit failed once");
                     this.failedSubmitCount++;
-                    if(this.failedSubmitCount >= 3){
+                    if(submissionFailedSubmitCount >= 3){
                         this.loginCookie = HDUHelper.login(this.userName,this.password);
-                        failedSubmitCount = 0;  //重新登录后置连续提交失败次数为0
+                        this.failedSubmitCount = 0;  //重新登录后置连续提交失败次数为0
                     }
-                    if(submission.getFailedSubmitCount() < 3){//如果尝试了三次以下，就重新尝试提交
-                        submission.setFailedSubmitCount(submission.getFailedSubmitCount() + 1);
+                    if(submissionFailedSubmitCount < 3){//如果尝试了三次以下，就重新尝试提交
+                        submissionFailedSubmitCount++;
                         runId = this.submitCode(submission);
                     }else{//提交失败，保存到数据库
                         submission.setStatus(RemoteStatusType.SUBMIT_FAILED_PERM.name());
-                        //top.tosim.actrainer.tmpdao.SubmissionDao.saveSubmission(submission);//
-                        submissionDao.updateByPrimaryKeySelective(submission);
+                        updateToDatabase(submission);
                         break;
                     }
                 }
@@ -81,12 +89,18 @@ public class HDUSubmitter implements Submitter,Runnable{
                 submission.setRemoteOj(RemoteOJ.HDU.name());
                 submission.setRemoteAccountName(this.userName);
                 submission.setRealRunId(runId);
-                System.out.println("submitted by " + this.userName+" and realRunId = " + runId);
+                log.info("submitted by " + this.userName+" and realRunId = " + runId);
                 SubmissionManager.putQuerySubmission(RemoteOJ.HDU,submission);
                 Thread.sleep(10);
             }catch (Exception e){
                 e.printStackTrace();
             }
         }
+    }
+
+    private void updateToDatabase(Submission submission){
+        submissionDao.updateByPrimaryKeySelective(submission);
+        Integer flag = submission.getStatus().equals(RemoteStatusType.AC.name()) ? 1 : -1;
+        userDao.updateAcOrFailCount(submission.getUserId(),flag);
     }
 }

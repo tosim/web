@@ -5,50 +5,72 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import top.tosim.actrainer.config.init.SubmissionManager;
+import top.tosim.actrainer.dao.ProblemDao;
 import top.tosim.actrainer.dao.SubmissionDao;
+import top.tosim.actrainer.dto.ProblemPageSelectDto;
 import top.tosim.actrainer.entity.Submission;
 import top.tosim.actrainer.remote.RemoteOJ;
 import top.tosim.actrainer.entity.Problem;
 import top.tosim.actrainer.remote.provider.hdu.HDUCrawler;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Controller
-@RequestMapping("/problem")
+@RequestMapping("/problems")
 public class ProblemController {
     private Logger log = LoggerFactory.getLogger(ProblemController.class);
-//    @Autowired
-//    private SubmitterInitializer submitterInitializer;
     @Autowired
-    private SubmissionDao submissionDao;
-
-    @RequestMapping(value = "/submit",method = RequestMethod.GET)
-    public String showSubmit(){
-        //submitterInitializer.init();
-        //((SubmitterInitializer)SpringContextUtils.getBeanByClass(SubmitterInitializer.class)).init();
-        return "submit_page";
-    }
-
-    @RequestMapping(value = "/submit",method = RequestMethod.POST)
-    public String doSubmit(@RequestBody Submission submission){
-        System.out.println(JSON.toJSONString(submission));
-        submission.initOther();
-        int insertNum = submissionDao.insert(submission);
-        System.out.println("insertNum = " + insertNum);
-        System.out.println("submissionId = " + submission.getId());
-        SubmissionManager.putSubmission(RemoteOJ.HDU,submission);
-        return "submit_page";
-    }
-
-    @RequestMapping(value = "/json",method = RequestMethod.GET)
+    private ProblemDao problemDao;
+    /*
+    * 获取题目详情
+    *   remoteOj
+    *   remoteProblemId
+    * */
+    @RequestMapping(value = "/{remoteOj}/{id}",method = RequestMethod.GET)
     @ResponseBody
-    public Problem getPJSON(String pid){
-        System.out.println("pid = " + pid);
-        Problem problem = HDUCrawler.crawl(pid);
+    public Problem getProblem(@PathVariable String remoteOj,@PathVariable String id){
+        System.out.println("pid = " + id);
+//        Problem problem = HDUCrawler.crawl(id);
+        Problem problem = problemDao.selectByOjAndPid(RemoteOJ.HDU.name(),id);
         log.info(JSON.toJSONString(problem));
         return problem;
+    }
+
+    /*
+    * 带筛选参数的分页查询
+    * type:url params
+    *   page
+    *   size
+    *   remoteOj
+    *   remoteProblemId
+    *   title
+    * */
+    @RequestMapping(value = "",method = RequestMethod.GET)
+    @ResponseBody
+    public List<Map<String,Object>> getProblemList(ProblemPageSelectDto pageSelectDto){
+        pageSelectDto.validateAndCalculateStart(10);
+//        log.info(JSON.toJSONString(pageSelectDto));
+        List<Map<String,Object>> ret = problemDao.selectPartByPage(pageSelectDto);
+        log.info(JSON.toJSONString(ret));
+        return ret;
+    }
+
+    /*
+    * 获取带参数的分页查询的总数
+    * type:url params
+    *   remoteOj
+    *   remoteProblemId
+    *   title
+    * */
+    @RequestMapping(value = "/count",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Integer> getProblemTotalCount(ProblemPageSelectDto pageSelectDto){
+        Map<String,Integer> totalCount = new HashMap<String, Integer>();
+        totalCount.put("totalCount",problemDao.selectTotalCount(pageSelectDto));
+        return totalCount;
     }
 }

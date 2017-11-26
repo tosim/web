@@ -1,4 +1,4 @@
-package top.tosim.actrainer.entity;
+package top.tosim.actrainer.dto;
 
 import top.tosim.actrainer.remote.RemoteStatusType;
 

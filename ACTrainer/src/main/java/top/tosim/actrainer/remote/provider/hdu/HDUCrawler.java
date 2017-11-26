@@ -2,6 +2,9 @@ package top.tosim.actrainer.remote.provider.hdu;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import top.tosim.actrainer.dao.ProblemDao;
 import top.tosim.actrainer.entity.Problem;
 import top.tosim.actrainer.httpclient.HttpTool;
 import top.tosim.actrainer.remote.RemoteOJ;
@@ -29,27 +32,33 @@ public class HDUCrawler{
             //e.printStackTrace();
         }
     }
+    private static Logger log = LoggerFactory.getLogger(HDUCrawler.class);
 
-    public static void crawlAll(){
+    public static void crawlAll(ProblemDao problemDao,boolean isUpdate){
         Integer maxProblemId = getMaxProblemId();
-        System.out.println("HDUmaxProblem = " + maxProblemId);
-
-        List<Problem> problemList = new ArrayList<Problem>();
-        //并发抓取
-        //for(int i = 1000;i <= maxProblemId;i+=800){
-            //Thread tmp = new Thread(new CrawlThread(i,i+800 >= maxProblemId ? maxProblemId - i + 1 : 800));
-            //tmp.start();
-        //}
-        for(int i = 1000;i <= maxProblemId;i++){
-            System.out.println("crawling " + i);
-            problemList.add(crawl(i+""));
+        //log.info("HDUmaxProblem = " + maxProblemId);
+        //System.out.println("HDUmaxProblem = " + maxProblemId);
+        //List<Problem> problemList = new ArrayList<Problem>();
+        if(isUpdate){
+            for(int i = 1000;i <= maxProblemId;i++){
+                log.info("crawling " + i);
+                problemDao.updateByRemoteOjAndProblemId(crawl(i+""));
+                log.info("update " + i + "\n");
+            }
+        }else{
+            for(int i = 1000;i <= maxProblemId;i++){
+                log.info("crawling " + i);
+                problemDao.insertSelective(crawl(i+""));
+                log.info("save " + i + "\n");
+            }
         }
+
     }
 
     public static Problem crawl(String remoteProblemId) {
         Problem problem = new Problem();
         String html = HDUHelper.getClient().get(HDUHelper.getProblemUrl()+"?pid="+remoteProblemId);
-//        System.out.println(html);
+        log.debug(html);
         //需要再document转换前抓，不然换行会被舍去
         problem.setHint(Tools.regFind(html,"<i>Hint</i></div>([\\s\\S]*?)</div><i[^<>]*?>"));
         if (!StringUtils.isEmpty(problem.getHint())){
@@ -58,7 +67,7 @@ public class HDUCrawler{
 
         String problemUrl = HDUHelper.getProblemUrl()+"?pid="+remoteProblemId;
         html = HtmlHandleUtil.transformUrlToAbs(html, problemUrl);//转换图片等的url的相对地址到绝对地址
-//        System.out.println(html);
+        log.debug(html);
 
         problem.setRemoteOj(RemoteOJ.HDU.name());
         problem.setRemoteProblemId(remoteProblemId);
@@ -68,7 +77,7 @@ public class HDUCrawler{
         problem.setTimeLimit(Tools.regFind(html, "Time Limit: ([\\s\\S]*?)&nbsp;"));
         problem.setMemoryLimit(Tools.regFind(html, "Memory Limit: ([\\s\\S]*?)<br />"));
         problem.setAuthor(Tools.regFind(html,"Author</div><div class=\"panel_content\">([\\s\\S]*?)</div>"));
-        problem.setDescription(Tools.regFind(html, ">Problem Description</div><div class=\"panel_content\">([\\s\\S]*?)<br /></div><div class=\"panel_bottom\">"));
+        problem.setDescription(Tools.regFind(html, ">Problem Description</div><div class=\"panel_content\">([\\s\\S]*?)(<br />)?</div><div class=\"panel_bottom\">"));
         problem.setInput(Tools.regFind(html, ">Input</div><div class=\"panel_content\">([\\s\\S]*?)<br /></div><div class=\"panel_bottom\">"));
         problem.setOutput(Tools.regFind(html, ">Output</div><div class=\"panel_content\">([\\s\\S]*?)<br /></div><div class=\"panel_bottom\">"));
         problem.setSource(Tools.regFind(html, "Source</div><div class=\"panel_content\">([\\s\\S]*?)<[^<>]*?panel_[^<>]*?>").replaceAll("<[\\s\\S]*?>", ""));
@@ -79,28 +88,7 @@ public class HDUCrawler{
         return problem;
     }
 
-
-
     public static void main(String[] args){
-        System.out.println(JSON.toJSONString(crawl(3065+"")));
-    }
-}
-
-class CrawlThread implements Runnable{
-    private int startId;
-    private int size;
-    public CrawlThread(int startId,int size){
-        this.startId = startId;
-        this.size = size;
-    }
-    public synchronized void run() {
-        System.out.println("Thread " + startId + " start");
-        for(int i = startId;i < startId + size;i++){
-            System.out.println("crawling " + i);
-            Problem problem = HDUCrawler.crawl(i + "");
-            //HDUCrawler.add(problem);
-            //
-            //
-        }
+        System.out.println(JSON.toJSONString(crawl(1083+"")));
     }
 }

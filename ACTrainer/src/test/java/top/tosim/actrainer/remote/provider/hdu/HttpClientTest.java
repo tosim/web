@@ -3,7 +3,7 @@ package top.tosim.actrainer.remote.provider.hdu;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.junit.Test;
-import top.tosim.actrainer.entity.SubmissionStatus;
+import top.tosim.actrainer.dto.SubmissionStatus;
 import top.tosim.actrainer.httpclient.HttpTool;
 import top.tosim.actrainer.remote.RemoteStatusNormalizer;
 import top.tosim.actrainer.remote.RemoteStatusType;

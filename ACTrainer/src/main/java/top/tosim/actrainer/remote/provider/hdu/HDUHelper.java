@@ -24,12 +24,12 @@ public class HDUHelper {
     //初始化语言映射
     //初始化网络请求对象（初始化请求头）
     static {
-        languageMap.put("0", "G++");
-        languageMap.put("1", "GCC");
-        languageMap.put("2", "C++");
-        languageMap.put("3", "C");
-        languageMap.put("4", "Pascal");
-        languageMap.put("5", "Java");
+        languageMap.put("G++", "0");
+        languageMap.put("GCC", "1");
+        languageMap.put("C++", "2");
+        languageMap.put("C", "3");
+        languageMap.put("Pascal", "4");
+        languageMap.put("Java", "5");
         Header[] headers = {
                 new BasicHeader("Host","acm.hdu.edu.cn"),
                 new BasicHeader("Referer","http://acm.hdu.edu.cn/"),

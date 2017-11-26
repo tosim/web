@@ -50,6 +50,15 @@
         </javaClientGenerator>
 
         <!-- 指定数据库表 -->
+        <table schema="actrainer" tableName="contest" domainObjectName="Contest" mapperName="ContestDao"
+        enableCountByExample="false"
+        enableUpdateByExample="false"
+        enableDeleteByExample="false"
+        enableSelectByExample="false"
+        selectByExampleQueryId="false">
+        <!--使用与数据库字段相同的属性名-->
+        <!--<property name="useActualColumnNames" value="true"/>-->
+        </table>
         <!--<table schema="actrainer" tableName="problem" domainObjectName="Problem" mapperName="ProblemDao"-->
                <!--enableCountByExample="false"-->
                <!--enableUpdateByExample="false"-->
@@ -65,17 +74,34 @@
             <!--&lt;!&ndash;使用与数据库字段相同的属性名&ndash;&gt;-->
             <!--&lt;!&ndash;<property name="useActualColumnNames" value="true"/>&ndash;&gt;-->
         <!--</table>-->
-        <table schema="actrainer" tableName="submission" domainObjectName="Submission" mapperName="SubmissionDao"
-               enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <columnOverride column="source" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <columnOverride column="compilation_error_info" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <!--使用与数据库字段相同的属性名-->
-            <!--<property name="useActualColumnNames" value="true"/>-->
-        </table>
-
+        <!--<table schema="actrainer" tableName="submission" domainObjectName="Submission" mapperName="SubmissionDao"-->
+               <!--enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<columnOverride column="source" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--<columnOverride column="compilation_error_info" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--&lt;!&ndash;使用与数据库字段相同的属性名&ndash;&gt;-->
+            <!--&lt;!&ndash;<property name="useActualColumnNames" value="true"/>&ndash;&gt;-->
+        <!--</table>-->
+        <!--<table schema="" tableName="contest" domainObjectName="Contest" mapperName="ContestDao"-->
+               <!--enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--&lt;!&ndash;使用与数据库字段相同的属性名&ndash;&gt;-->
+            <!--&lt;!&ndash;<property name="useActualColumnNames" value="true"/>&ndash;&gt;-->
+        <!--</table>-->
+        <!--<table schema="" tableName="user" domainObjectName="User" mapperName="UserDao"-->
+               <!--enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--&lt;!&ndash;使用与数据库字段相同的属性名&ndash;&gt;-->
+            <!--&lt;!&ndash;<property name="useActualColumnNames" value="true"/>&ndash;&gt;-->
+        <!--</table>-->
     </context>
 </generatorConfiguration>

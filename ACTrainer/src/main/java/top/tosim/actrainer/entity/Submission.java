@@ -1,5 +1,8 @@
 package top.tosim.actrainer.entity;
 
+import top.tosim.actrainer.config.init.LanguageMapManager;
+import top.tosim.actrainer.remote.RemoteOJ;
+
 import java.util.Date;
 
 public class Submission {
@@ -9,7 +12,7 @@ public class Submission {
 
     //提交到远程所需信息
     private String remoteProblemId;     //远程真实题目Id
-    private String language;            //语言在远程的代码编号
+    private String languageCode;        //语言在远程的代码编号
     private String source;              //提交的源代码
     private String remoteAccountName;   //交题账号名
     private String remoteOj;            //交题OJ
@@ -22,20 +25,35 @@ public class Submission {
     private Integer executionMemory;    //运行内存(未AC提交为空    单位:KB)
 
 
-    private Integer failedSubmitCount;  //累计提交失败次数
-    private Integer failedQueryCount;   //累计查询结果失败次数
+//    private Integer failedSubmitCount;  //累计提交失败次数
+//    private Integer failedQueryCount;   //累计查询结果失败次数
     private Integer open;                 //代码是否公开
-    private String dispLanguage;        //用于前端显示的语言
+    private String language;            //用于前端显示的语言
     private Integer contestId;          //组织的比赛Id
 
     private Integer userId;             //提交的用户的Id
     private String accountName;         //提交的用户名
 
-    public void initOther() {
-        setStatus("Pending");
-        setSubmitTime(new Date());
-        setFailedSubmitCount(0);
-        setFailedQueryCount(0);
+    public void init() {
+        this.status = "Pending";
+        this.submitTime = new Date();
+        this.languageCode = LanguageMapManager.getLanguageMap(RemoteOJ.valueOf(remoteOj)).get(this.remoteOj);
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getAccountName() {
+        return accountName;
+    }
+
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
     }
 
     public Integer getOpen() {
@@ -44,22 +62,6 @@ public class Submission {
 
     public void setOpen(Integer open) {
         this.open = open;
-    }
-
-    public Integer getFailedQueryCount() {
-        return failedQueryCount;
-    }
-
-    public void setFailedQueryCount(Integer failedQueryCount) {
-        this.failedQueryCount = failedQueryCount;
-    }
-
-    public Integer getFailedSubmitCount() {
-        return failedSubmitCount;
-    }
-
-    public void setFailedSubmitCount(Integer failedSubmitCount) {
-        this.failedSubmitCount = failedSubmitCount;
     }
 
     public Integer getId() {
@@ -158,12 +160,12 @@ public class Submission {
         this.remoteOj = remoteOj;
     }
 
-    public String getDispLanguage() {
-        return dispLanguage;
+    public String getLanguageCode() {
+        return languageCode;
     }
 
-    public void setDispLanguage(String dispLanguage) {
-        this.dispLanguage = dispLanguage;
+    public void setLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
     }
 
     public Integer getContestId() {

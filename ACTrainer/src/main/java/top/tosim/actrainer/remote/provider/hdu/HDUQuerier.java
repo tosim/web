@@ -1,9 +1,12 @@
 package top.tosim.actrainer.remote.provider.hdu;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import top.tosim.actrainer.config.init.SubmissionManager;
 import top.tosim.actrainer.dao.SubmissionDao;
+import top.tosim.actrainer.dao.UserDao;
 import top.tosim.actrainer.entity.Submission;
-import top.tosim.actrainer.entity.SubmissionStatus;
+import top.tosim.actrainer.dto.SubmissionStatus;
 import top.tosim.actrainer.httpclient.DedicatedHttpClient;
 import top.tosim.actrainer.remote.Querier;
 import top.tosim.actrainer.remote.RemoteOJ;
@@ -15,10 +18,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HDUQuerier implements Querier,Runnable{
+    Logger log = LoggerFactory.getLogger(HDUQuerier.class);
+
     private DedicatedHttpClient client = HDUHelper.getClient(); //HDU网络请求对象
     private SubmissionDao submissionDao;                        //数据库操作对象，当作参数传入
+    private UserDao userDao;
 
-    public HDUQuerier(SubmissionDao submissionDao){
+    public HDUQuerier(SubmissionDao submissionDao, UserDao userDao){
         this.submissionDao = submissionDao;
     }
     public SubmissionStatus queryResult(Submission submission) {
@@ -47,17 +53,19 @@ public class HDUQuerier implements Querier,Runnable{
             try{
                 Submission submission = SubmissionManager.takeQuerySubmission(RemoteOJ.HDU);
                 SubmissionStatus status = this.queryResult(submission);
-                System.out.println("query status , "+status.getStatusType().name());
+                log.info("query status , "+status.getStatusType().name());
                 //未查询出最终状态,最多查询60s，60s内还未查询出结果判定为提交失败
+                int submissionFailedQueryCount = 0;
                 while(status == null || status.getStatusType().isFinal() == false){
                     Thread.sleep(1500);
-                    if(submission.getFailedQueryCount() < 40){//如果尝试了15次以下，就重新尝试查询
-                        submission.setFailedQueryCount(submission.getFailedQueryCount() + 1);
+                    if(submissionFailedQueryCount < 40){//如果尝试了15次以下，就重新尝试查询
+                        submissionFailedQueryCount++;
                         status = this.queryResult(submission);
-                        System.out.println("query status , "+status.getStatusType().name());
+                        log.info("query status , "+status.getStatusType().name());
                     }else{//查询失败，保存到数据库，标记提交失败
                         submission.setStatus(RemoteStatusType.FAILED_OTHER.name());
-                        submissionDao.updateByPrimaryKeySelective(submission);//
+                        //submissionDao.updateByPrimaryKeySelective(submission);//
+                        updateToDatabase(submission);
                         break;
                     }
                 }
@@ -68,13 +76,20 @@ public class HDUQuerier implements Querier,Runnable{
                 submission.setExecutionTime(status.getExecutionTime());
                 submission.setExecutionMemory(status.getExecutionMemory());
 
-                System.out.println("save to table,querier");
-                System.out.println("status = " + submission.getStatus());
-                submissionDao.updateByPrimaryKeySelective(submission);
+                log.info("save to table,querier");
+                log.info("status = " + submission.getStatus());
+                //submissionDao.updateByPrimaryKeySelective(submission);
+                updateToDatabase(submission);
                 Thread.sleep(10);
             }catch (Exception e){
                 e.printStackTrace();
             }
         }
+    }
+
+    private void updateToDatabase(Submission submission){
+        submissionDao.updateByPrimaryKeySelective(submission);//
+        Integer flag = submission.getStatus().equals(RemoteStatusType.AC.name()) ? 1 : -1;
+        userDao.updateAcOrFailCount(submission.getUserId(),flag);
     }
 }

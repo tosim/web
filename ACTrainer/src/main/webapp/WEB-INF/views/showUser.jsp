@@ -12,5 +12,9 @@
 </head>
 <body>
 ${user.userName}
+<FORM action="/sessions" method="post">
+    <input name="_method" value="delete"/><br>
+    <input type="submit" value="提交"/><br>
+</FORM>
 </body>
 </html>
