@@ -40,4 +40,9 @@ public class ContestDaoTest {
 
         contestDao.insertIntoContestProblem(contestProblem);
     }
+
+    @Test
+    public void test3(){
+        System.out.println(contestDao.selectProblemFromContestProblem(3,"HDU","1000"));
+    }
 }

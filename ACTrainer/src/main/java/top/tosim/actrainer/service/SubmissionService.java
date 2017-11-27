@@ -1,10 +1,10 @@
-package top.tosim.actrainer.controller;
+package top.tosim.actrainer.service;
 
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,57 +15,35 @@ import top.tosim.actrainer.dto.SubmissionPageSelectDto;
 import top.tosim.actrainer.entity.Submission;
 import top.tosim.actrainer.entity.User;
 import top.tosim.actrainer.remote.RemoteOJ;
-import top.tosim.actrainer.service.SubmissionService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Controller
-@RequestMapping("/submissions")
-public class SubmissionController {
-    Logger log = LoggerFactory.getLogger(SubmissionController.class);
-
+@Service
+public class SubmissionService {
+    Logger log = LoggerFactory.getLogger(SubmissionService.class);
     @Autowired
     SubmissionDao submissionDao;
 
-    @Autowired
-    SubmissionService submissionService;
-    /*
-    * 带参数的分页查询
-    * fromId
-    * remoteOj
-    * remoteProblemId
-    * accountName
-    * language
-    * status
-    * */
-    @RequestMapping(value = "",method = RequestMethod.GET)
-    @ResponseBody
     public List<Map<String,Object>> getSubmissionList(SubmissionPageSelectDto pageSelectDto){
-        /*pageSelectDto.validateAndCalculateStart(15);
+        pageSelectDto.validateAndCalculateStart(15);
         List<Map<String,Object>> ret = submissionDao.selectPartByPage(pageSelectDto);
-        return ret;*/
-        return submissionService.getSubmissionList(pageSelectDto);
+        return ret;
     }
 
-    @RequestMapping(value = "/count",method = RequestMethod.GET)
-    @ResponseBody
     public Map<String,Integer> getSubmissionTotalCount(SubmissionPageSelectDto pageSelectDto){
-        /*Map<String,Integer> totalCount = new HashMap<String, Integer>();
+        Map<String,Integer> totalCount = new HashMap<String, Integer>();
         totalCount.put("totalCount",submissionDao.selectTotalCount(pageSelectDto));
-        return totalCount;*/
-        return submissionService.getSubmissionTotalCount(pageSelectDto);
+        return totalCount;
     }
 
     /*
     *处理提交
     * */
-    @RequestMapping(value = "",method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String,Integer> doSubmit(HttpServletRequest request, @RequestBody Submission submission){
-        /*User user = (User)request.getSession(false).getAttribute("user");
+    public Map<String,Integer> doSubmit(HttpServletRequest request,Submission submission){
+        User user = (User)request.getSession(false).getAttribute("user");
         Map<String,Integer> ret = new HashMap<String,Integer>();
         if(user == null){
             ret.put("success",0);
@@ -80,7 +58,6 @@ public class SubmissionController {
         log.info("submissionId = " + submission.getId());
         SubmissionManager.putSubmission(RemoteOJ.HDU,submission); //提交到提交队列等待提交
         ret.put("success",1);
-        return ret;*/
-        return submissionService.doSubmit(request,submission);
+        return ret;
     }
 }

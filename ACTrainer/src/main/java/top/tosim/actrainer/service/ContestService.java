@@ -1,55 +1,45 @@
-package top.tosim.actrainer.controller;
+package top.tosim.actrainer.service;
 
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import top.tosim.actrainer.dao.ContestDao;
 import top.tosim.actrainer.dao.UserDao;
 import top.tosim.actrainer.dto.ContestPageSelectDto;
-import top.tosim.actrainer.dto.ProblemPageSelectDto;
 import top.tosim.actrainer.entity.Contest;
 import top.tosim.actrainer.entity.ContestProblem;
 import top.tosim.actrainer.entity.Problem;
 import top.tosim.actrainer.entity.User;
-import top.tosim.actrainer.service.ContestService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
+public class ContestService {
+    Logger log = LoggerFactory.getLogger(ContestService.class);
 
-@Controller
-@RequestMapping("/contests")
-public class ContestController {
-    Logger log = LoggerFactory.getLogger(ContestController.class);
-    @Autowired
-    UserDao userDao;
     @Autowired
     ContestDao contestDao;
     @Autowired
-    ContestService contestService;
+    UserDao userDao;
 
-    @RequestMapping(value = "/count",method = RequestMethod.GET)
-    @ResponseBody
     public Map<String,Integer> getContestTotalCount(ContestPageSelectDto pageSelectDto){
-        /*Map<String,Integer> totalCount = new HashMap<String, Integer>();
+        Map<String,Integer> totalCount = new HashMap<String, Integer>();
         totalCount.put("totalCount",contestDao.selectTotalCount(pageSelectDto));
-        return totalCount;*/
-        return contestService.getContestTotalCount(pageSelectDto);
+        return totalCount;
     }
 
-    @RequestMapping(value = "",method = RequestMethod.GET)
-    @ResponseBody
+
     public List<Contest> getContestList(ContestPageSelectDto pageSelectDto){
-        /*pageSelectDto.validateAndCalculateStart(15);
+        pageSelectDto.validateAndCalculateStart(15);
         List<Contest> ret = contestDao.selectPartByPage(pageSelectDto);
         log.info(JSON.toJSONString(ret));
-        return ret;*/
-        return contestService.getContestList(pageSelectDto);
+        return ret;
     }
     /*
     * 创建一场比赛，不涉及题目描述的修改
@@ -60,10 +50,9 @@ public class ContestController {
 	        "problemList":[["HDU",1000],["POJ",2000]]
         }
     * */
-    @RequestMapping(value = "",method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String,Integer> createContest(HttpServletRequest request, @RequestBody Contest contest){
-        /*log.info(JSON.toJSONString(contest));
+
+    public Map<String,Integer> createContest(HttpServletRequest request,Contest contest){
+        log.info(JSON.toJSONString(contest));
         User user = (User)request.getSession(true).getAttribute("user");
         Map<String,Integer> ret = new HashMap<String,Integer>();
         if(user == null){
@@ -82,9 +71,9 @@ public class ContestController {
             contestDao.insertIntoContestProblem(contestProblem);
         }
         ret.put("success",1);
-        return ret;*/
-        return contestService.createContest(request,contest);
+        return ret;
     }
+
     /*
     * 修改比赛的基本信息
     * title
@@ -92,10 +81,8 @@ public class ContestController {
     * duration
     * problemList
     * */
-    @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
-    @ResponseBody
-    public Map<String,Integer> updateContestProblem(HttpServletRequest request, @PathVariable("id") int id,@RequestBody Contest contest){
-        /*log.info(JSON.toJSONString(contest));
+    public Map<String,Integer> updateContestProblem(HttpServletRequest request,int id,Contest contest){
+        log.info(JSON.toJSONString(contest));
         User user = (User)request.getSession(true).getAttribute("user");
         Map<String,Integer> ret = new HashMap<String,Integer>();
         if(user == null){
@@ -117,19 +104,16 @@ public class ContestController {
             contestDao.insertIntoContestProblem(contestProblem);
         }
         ret.put("success",1);
-        return ret;*/
-        return updateContestProblem(request,id,contest);
+        return ret;
     }
 
-    @RequestMapping(value = "/{id}/{remoteOj}/{remoteProblemId}",method = RequestMethod.POST)
-    @ResponseBody
     public Map<String,Integer> modifyProblem(
             HttpServletRequest request,
             @PathVariable("id") int id,
             @PathVariable("remoteOj") String remoteOj,
             @PathVariable("remoteProblemId") String remoteProblemId,
             @RequestBody Problem problem){
-        /*log.info("contestId = " + id + " and remoteOj = " + remoteOj + " and remoteProblemId = " + remoteProblemId);
+        log.info("contestId = " + id + " and remoteOj = " + remoteOj + " and remoteProblemId = " + remoteProblemId);
         log.info("put problem info = " + JSON.toJSONString(problem));
         request.getSession(true).setAttribute("user",userDao.selectByPrimaryKey(2));
 
@@ -175,7 +159,6 @@ public class ContestController {
             contestDao.updateEditedProblemByPrimaryKey(problem);
         }
         ret.put("success",1);
-        return ret;*/
-        return contestService.modifyProblem(request,id,remoteOj,remoteProblemId,problem);
+        return ret;
     }
 }

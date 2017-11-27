@@ -49,6 +49,7 @@
       </if>
     </trim>
   </insert>
+
   <select id="selectPartByPage" parameterType="top.tosim.actrainer.dto.ContestPageSelectDto" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
@@ -79,8 +80,7 @@
   </select>
 
   <select id="selectTotalCount" parameterType="top.tosim.actrainer.dto.ContestPageSelectDto" resultType="java.lang.Integer">
-    select
-    <include refid="Base_Column_List"/>
+    select count(*)
     from contest
     <if test="accountName!=null">
       ,user
@@ -185,7 +185,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <insert id="insertEditedProblemSelective" parameterType="top.tosim.actrainer.entity.Problem">
+  <insert id="insertEditedProblemSelective" useGeneratedKeys="true" keyProperty="id" parameterType="top.tosim.actrainer.entity.Problem">
     insert into edited_problem
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -277,7 +277,69 @@
     </trim>
   </insert>
 
-  <select id="selectFromContestProblem" resultType="java.lang.Integer">
+  <select id="selectEditIdFromContestProblem" resultType="java.lang.Integer">
+    select edited_problem_id
+    from contest_problem
+    where contest_id = #{contestId}
+    and remote_oj = #{remoteOj}
+    and remote_problem_id = #{remoteProblemId}
+  </select>
+
+  <update id="updateContestProblemForEdit">
+    update contest_problem
+    set edited_problem_id = #{editedProblemId}
+    where contest_id = #{contestId}
+    and remote_oj = #{remoteOj}
+    and remote_problem_id = #{remoteProblemId}
+  </update>
+
+  <update id="updateEditedProblemByPrimaryKey" parameterType="top.tosim.actrainer.entity.Problem">
+    update edited_problem
+    <set>
+      <if test="remoteOj != null">
+        remote_oj = #{remoteOj,jdbcType=VARCHAR},
+      </if>
+      <if test="remoteProblemId != null">
+        remote_problem_id = #{remoteProblemId,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="timeLimit != null">
+        time_limit = #{timeLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="memoryLimit != null">
+        memory_limit = #{memoryLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="input != null">
+        input = #{input,jdbcType=VARCHAR},
+      </if>
+      <if test="output != null">
+        output = #{output,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleInput != null">
+        sample_input = #{sampleInput,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleOutput != null">
+        sample_output = #{sampleOutput,jdbcType=VARCHAR},
+      </if>
+      <if test="hint != null">
+        hint = #{hint,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectProblemFromContestProblem" resultType="java.lang.Integer">
     select count(*)
     from contest_problem
     where contest_id = #{contestId}
@@ -285,11 +347,4 @@
     and remote_problem_id = #{remoteProblemId}
   </select>
 
-  <!--<update id="updateContestProblemForEdit">-->
-    <!--update contest_problem-->
-    <!--set-->
-    <!--where contest_id = #{contestId}-->
-    <!--and remote_oj = #{remoteOj}-->
-    <!--and remote_problem_id = #{remoteProblemId}-->
-  <!--</update>-->
 </mapper>

@@ -4,6 +4,7 @@ import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.context.annotation.*;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
@@ -26,16 +27,5 @@ public class RootConfig {
         proxycreate.setInterceptorNames("transactionInterceptor");
         return proxycreate;
     }*/
-    @Bean
-    public MappingJackson2HttpMessageConverter jsonHttpMessageConverter(){
-        return new MappingJackson2HttpMessageConverter();
-    }
 
-    public RequestMappingHandlerAdapter requestMappingHandlerAdapter(MappingJackson2HttpMessageConverter jsonHttpMessageConverter){
-        RequestMappingHandlerAdapter adapter = new RequestMappingHandlerAdapter();
-        List list = new ArrayList();
-        list.add(jsonHttpMessageConverter);
-        adapter.setMessageConverters(list);
-        return adapter;
-    }
 }

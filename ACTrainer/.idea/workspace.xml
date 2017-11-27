@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" line="26" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" line="30" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbac62e5-a068-4c0c-b640-488554f1acc9" name="Default" comment="" />
@@ -21,32 +21,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Problem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Problem.java">
+      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="-1201">
+              <caret line="43" column="85" lean-forward="false" selection-start-line="43" selection-start-column="85" selection-end-line="43" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1265#1266#0" expanded="true" />
+                <element signature="e#1298#1299#0" expanded="true" />
+                <element signature="e#2202#2218#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showUser.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUser.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProblemController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ProblemController.java">
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+            <state relative-caret-position="459">
+              <caret line="34" column="75" lean-forward="false" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProblemDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ProblemDao.java">
+      <file leaf-file-name="RootConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/RootConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="247">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="29" column="81" lean-forward="false" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +81,8 @@
       <file leaf-file-name="ProblemDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProblemDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="185" column="11" lean-forward="true" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
+            <state relative-caret-position="5425">
+              <caret line="217" column="11" lean-forward="false" selection-start-line="217" selection-start-column="11" selection-end-line="217" selection-end-column="11" />
               <folding>
                 <marker date="1511609620366" expanded="true" signature="2131:2163" ph="select count... problem" />
                 <marker date="1511609620366" expanded="true" signature="2587:2938" ph="select from problem" />
@@ -72,108 +99,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContestController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ContestController.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="129" column="50" lean-forward="false" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="50" />
+            <state relative-caret-position="275">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1148#1165#0" expanded="true" />
-                <element signature="e#2178#2194#0" expanded="true" />
-                <element signature="e#3402#3418#0" expanded="true" />
-                <element signature="e#4877#4893#0" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#549#550#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
+                <element signature="e#720#721#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubmissionDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SubmissionDao.xml">
+      <file leaf-file-name="UserDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="52" column="53" lean-forward="false" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+            <state relative-caret-position="244">
+              <caret line="212" column="47" lean-forward="true" selection-start-line="212" selection-start-column="47" selection-end-line="212" selection-end-column="47" />
               <folding>
-                <element signature="e#3091#3095#0" expanded="true" />
-                <element signature="e#3943#3947#0" expanded="true" />
-                <marker date="1511625740763" expanded="true" signature="2997:3677" ph="select count... submission" />
-                <marker date="1511625740763" expanded="true" signature="3818:3884" ph="select from submission" />
-                <marker date="1511625740763" expanded="true" signature="3818:4477" ph="select from submission" />
-                <marker date="1511625740763" expanded="true" signature="4560:4687" ph="select from submission" />
-                <marker date="1511625740763" expanded="true" signature="4806:4891" ph="select count... submission" />
-                <marker date="1511625740763" expanded="true" signature="5012:5098" ph="select count... submission" />
-                <marker date="1511625740763" expanded="true" signature="5210:5316" ph="select from submission" />
-                <marker date="1511625740763" expanded="true" signature="5402:5462" ph="delete from " />
-                <marker date="1511625740763" expanded="true" signature="5597:6389" ph="insert into submission... " />
-                <marker date="1511625740763" expanded="true" signature="9214:10774" ph="update submi... " />
-                <marker date="1511625740763" expanded="true" signature="10880:11693" ph="update submi... " />
+                <marker date="1511769992563" expanded="true" signature="2140:2203" ph="update user " />
+                <marker date="1511769992563" expanded="true" signature="2256:2460" ph="update user " />
+                <marker date="1511769992563" expanded="true" signature="2594:2869" ph="select from problem" />
+                <marker date="1511769992563" expanded="true" signature="3009:3038" ph="select count... user" />
+                <marker date="1511769992563" expanded="true" signature="3238:3359" ph="select from user" />
+                <marker date="1511769992563" expanded="true" signature="3471:3570" ph="select from user" />
+                <marker date="1511769992563" expanded="true" signature="3656:3710" ph="delete from " />
+                <marker date="1511769992563" expanded="true" signature="3798:4273" ph="insert into user... " />
+                <marker date="1511769992563" expanded="true" signature="6242:7261" ph="update user " />
+                <marker date="1511769992563" expanded="true" signature="7361:7875" ph="update user " />
+                <marker date="1511769992563" expanded="true" signature="7819:7875" ph="update user " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubmissionPageSelectDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionPageSelectDto.java">
+      <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-              <folding>
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#466#467#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubmissionDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/SubmissionDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="66" />
+            <state relative-caret-position="784">
+              <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContestDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ContestDao.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="35" />
+            <state relative-caret-position="358">
+              <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContestDao.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ContestDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="284" column="46" lean-forward="true" selection-start-line="284" selection-start-column="46" selection-end-line="284" selection-end-column="46" />
-              <folding>
-                <element signature="e#2320#2324#0" expanded="true" />
-                <element signature="e#2417#2421#0" expanded="true" />
-                <element signature="e#2478#2482#0" expanded="true" />
-                <element signature="e#2585#2589#0" expanded="true" />
-                <element signature="e#3205#3209#0" expanded="true" />
-                <element signature="e#3302#3306#0" expanded="true" />
-                <element signature="e#3363#3367#0" expanded="true" />
-                <element signature="e#3470#3474#0" expanded="true" />
-                <marker date="1511626746542" expanded="true" signature="825:852" ph="insert into contest_problem... " />
-                <marker date="1511626746542" expanded="true" signature="1918:2636" ph="select from contest" />
-                <marker date="1511626746542" expanded="true" signature="1918:2660" ph="select from contest" />
-                <marker date="1511626746542" expanded="true" signature="2803:2866" ph="select from contest" />
-                <marker date="1511626746542" expanded="true" signature="3633:3736" ph="select from contest" />
-                <marker date="1511626746542" expanded="true" signature="3822:3879" ph="delete from " />
-                <marker date="1511626746542" expanded="true" signature="4011:4237" ph="insert into contest... " />
-                <marker date="1511626746542" expanded="true" signature="5356:5801" ph="update conte... " />
-                <marker date="1511626746542" expanded="true" signature="5904:6137" ph="update conte... " />
-                <marker date="1511626746542" expanded="true" signature="8595:8750" ph="select count... contest_problem" />
-                <marker date="1511626746542" expanded="true" signature="8814:8996" ph="select count... contest_problem" />
-                <marker date="1511626746542" expanded="true" signature="8823:8996" ph="update conte... " />
               </folding>
             </state>
           </provider>
@@ -193,11 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>reg</find>
-      <find>namespace=&quot;top.tosim.actrainer.dao.ProblemDao&quot;</find>
-      <find>Problem Description</find>
-      <find>no war</find>
-      <find>HttpTool</find>
       <find>panel_bottom</find>
       <find>output</find>
       <find>sampleoutput</find>
@@ -223,6 +205,11 @@
       <find>key</find>
       <find>insertSE</find>
       <find>insertse</find>
+      <find>alibaba</find>
+      <find>insertIntoContestProblem</find>
+      <find>selectProblemFromContestProblem</find>
+      <find>ContestProblem</find>
+      <find>entity.reentity</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -233,27 +220,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUInfo.java" />
-        <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/config/init/SubmitterInitializerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/remote/provider/hdu/HttpClientTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/httpclient/DedicatedHttpClient.java" />
-        <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/remote/provider/hdu/HDUCrawlerTest.java" />
-        <option value="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.3/jsoup-1.7.3.jar!/org/jsoup/nodes/Element.class" />
-        <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/remote/provider/hdu/absURLtest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/tool/HtmlHandleUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/remote/provider/hdu/parttenTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionStatus.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUser.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/ProblemPageSelectDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/UserPageSelectDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/init/OJWorkerInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUQuerier.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/PageSelectDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SessionController.java" />
         <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dto/PageSelectDtoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/init/LanguageMapManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Submission.java" />
@@ -265,25 +237,40 @@
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUCrawler.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionSelectDto.java" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ProblemController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
         <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/SubmissionDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/ContestPageSelectDto.java" />
         <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/UserDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ProblemDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/SubmissionDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SubmissionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Contest.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/ContestProblem.java" />
-        <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/ContestDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionPageSelectDto.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SubmissionDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ContestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ContestDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/ContestDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ContestDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ContestDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ProblemDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/SubmissionDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ProblemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/ProblemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/SessionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SessionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SubmissionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/SubmissionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ContestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/ContestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/PicConfirmData.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/global.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/RootConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/FileController.java" />
       </list>
     </option>
   </component>
@@ -328,9 +315,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="443" />
-    <option name="y" value="32" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="14" />
     <option name="width" value="1365" />
     <option name="height" value="930" />
   </component>
@@ -349,6 +336,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -405,24 +395,6 @@
               <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="actrainer" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="actrainer" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -437,39 +409,48 @@
               <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
               <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
               <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
               <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="actrainer" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
               <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="actrainer" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ACTrainer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="ACTrainer" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -490,10 +471,10 @@
       <recent name="top.tosim.actrainer.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workspace\web\ACTrainer\src\main\resources" />
       <recent name="D:\Workspace\web\ACTrainer\src\main\java\top\tosim\actrainer\entity" />
       <recent name="D:\Workspace\web\ACTrainer\src\main\java\top\tosim\actrainer\dao" />
       <recent name="D:\Workspace\web\ACTrainer\src\main\resources\mapper" />
-      <recent name="D:\Workspace\web\ACTrainer\src\main\resources" />
       <recent name="D:\Workspace\web\ACTrainer\src\main\java\top\tosim\actrainer" />
     </key>
   </component>
@@ -560,6 +541,50 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="ContestDaoTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="top.tosim.actrainer.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ACTrainer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="top.tosim.actrainer.dao" />
+      <option name="MAIN_CLASS_NAME" value="top.tosim.actrainer.dao.ContestDaoTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="HDUCrawler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="top.tosim.actrainer.remote.provider.hdu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="top.tosim.actrainer.remote.provider.hdu.HDUCrawler" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ACTrainer" />
+      <envs />
+    </configuration>
     <configuration name="Mybatis-generate" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -583,50 +608,6 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-    </configuration>
-    <configuration name="ProblemCrawlerAndSaver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="top.tosim.actrainer.config.init.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="top.tosim.actrainer.config.init.ProblemCrawlerAndSaver" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ACTrainer" />
-      <envs />
-    </configuration>
-    <configuration name="SubmissionDaoTest.selectPartByPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="top.tosim.actrainer.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ACTrainer" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="top.tosim.actrainer.dao" />
-      <option name="MAIN_CLASS_NAME" value="top.tosim.actrainer.dao.SubmissionDaoTest" />
-      <option name="METHOD_NAME" value="selectPartByPageTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.20" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -808,19 +789,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.Mybatis-generate" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ProblemCrawlerAndSaver" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserDaoTest.testUTF8" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SubmissionDaoTest.selectPartByPageTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test2" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoTest.testUTF8" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test2" />
+      <item index="5" class="java.lang.String" itemvalue="Application.HDUCrawler" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test3" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test2" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoTest.testUTF8" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SubmissionDaoTest.selectPartByPageTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.ProblemCrawlerAndSaver" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test3" />
+        <item index="2" class="java.lang.String" itemvalue="Application.HDUCrawler" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ContestDaoTest.test2" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserDaoTest.testUTF8" />
       </list>
     </recent_temporary>
   </component>
@@ -849,25 +830,11 @@
       <workItem from="1511501022750" duration="52000" />
       <workItem from="1511501207276" duration="5948000" />
       <workItem from="1511508919776" duration="41820000" />
+      <workItem from="1511677010551" duration="18204000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContestDaoTest_test - 2017.11.25 at 22h 41m 50s.xml">
-      <configuration name="ContestDaoTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContestDaoTest_test - 2017.11.25 at 22h 43m 45s.xml">
-      <configuration name="ContestDaoTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContestDaoTest_test - 2017.11.25 at 22h 44m 02s.xml">
-      <configuration name="ContestDaoTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContestDaoTest_test - 2017.11.25 at 22h 44m 21s.xml">
-      <configuration name="ContestDaoTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContestDaoTest_test - 2017.11.25 at 22h 45m 28s.xml">
-      <configuration name="ContestDaoTest.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ContestDaoTest_test - 2017.11.25 at 22h 45m 41s.xml">
       <configuration name="ContestDaoTest.test" configurationId="JUnit" />
     </history-entry>
@@ -880,15 +847,31 @@
     <history-entry file="ContestDaoTest_test - 2017.11.25 at 22h 48m 33s.xml">
       <configuration name="ContestDaoTest.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ContestDaoTest_test - 2017.11.26 at 15h 05m 35s.xml">
+      <configuration name="ContestDaoTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContestDaoTest_test - 2017.11.26 at 15h 06m 55s.xml">
+      <configuration name="ContestDaoTest.test" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ContestDaoTest_test2 - 2017.11.25 at 23h 29m 59s.xml">
       <configuration name="ContestDaoTest.test2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ContestDaoTest_test3 - 2017.11.26 at 15h 01m 36s.xml">
+      <configuration name="ContestDaoTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContestDaoTest_test3 - 2017.11.26 at 15h 04m 54s.xml">
+      <configuration name="ContestDaoTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContestDaoTest_test3 - 2017.11.26 at 15h 05m 10s.xml">
+      <configuration name="ContestDaoTest.test3" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217438000" />
+    <option name="totallyTimeSpent" value="235642000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4379085" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
@@ -904,19 +887,18 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738718" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36819172" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3672613" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24509804" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5288562" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -924,6 +906,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -934,257 +917,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/top/tosim/actrainer/remote/provider/hdu/parttenTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/filter/DruidStatFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/filter/MyCORSFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/servlet/DruidServletMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/DataSourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2670">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="174" column="5" lean-forward="false" selection-start-line="174" selection-start-column="5" selection-end-line="174" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/top/tosim/actrainer/config/init/SubmitterInitializerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/submit_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE.jar!/org/springframework/web/filter/HiddenHttpMethodFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/init/OJWorkerInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-          <folding>
-            <element signature="e#1701#1702#0" expanded="false" />
-            <element signature="e#1774#1775#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="e#869#870#0" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUQuerier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="92" column="65" lean-forward="false" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/UserPageSelectDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding>
-            <element signature="e#190#191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/ProblemPageSelectDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dto/PageSelectDtoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUSubmitter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="46" column="60" lean-forward="false" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-          <folding>
-            <element signature="method#getMaxProblemId#0;class#HDUCrawler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/filter/HttpMethodFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/init/ProblemCrawlerAndSaver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="e#603#604#0" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/init/LanguageMapManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#502#503#0" expanded="false" />
-            <element signature="e#553#554#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/PageSelectDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="60" column="16" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Submission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-815">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#353#354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/ProblemDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/Submitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,101 +945,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/UserDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-          <folding>
-            <marker date="1511614873805" expanded="true" signature="1846:2050" ph="update user " />
-            <marker date="1511614873805" expanded="true" signature="2184:2459" ph="select from problem" />
-            <marker date="1511614873805" expanded="true" signature="2599:2628" ph="select count... user" />
-            <marker date="1511614873805" expanded="true" signature="2828:2949" ph="select from user" />
-            <marker date="1511614873805" expanded="true" signature="3061:3161" ph="select from user" />
-            <marker date="1511614873805" expanded="true" signature="3247:3301" ph="delete from " />
-            <marker date="1511614873805" expanded="true" signature="3389:3672" ph="insert into user... " />
-            <marker date="1511614873805" expanded="true" signature="4901:5447" ph="update user " />
-            <marker date="1511614873805" expanded="true" signature="5547:5830" ph="update user " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="64" column="73" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2043#2056#0" expanded="true" />
-            <element signature="e#2648#2664#0" expanded="true" />
-            <element signature="e#3158#3174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SessionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SubmissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-335">
-          <caret line="55" column="49" lean-forward="false" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2363#2379#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/ContestPageSelectDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Contest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1308,105 +960,225 @@
         <state relative-caret-position="210">
           <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="35" />
           <folding>
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="false" />
+            <element signature="e#278#279#0" expanded="false" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#343#344#0" expanded="false" />
+            <element signature="e#380#381#0" expanded="false" />
+            <element signature="e#412#413#0" expanded="false" />
+            <element signature="e#463#464#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#540#541#0" expanded="false" />
+            <element signature="e#571#572#0" expanded="false" />
+            <element signature="e#619#620#0" expanded="false" />
+            <element signature="e#659#660#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#857#858#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+            <element signature="e#938#939#0" expanded="false" />
+            <element signature="e#1001#1002#0" expanded="false" />
+            <element signature="e#1055#1056#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/remote/provider/hdu/HDUCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+          <folding>
+            <element signature="method#getMaxProblemId#0;class#HDUCrawler#0" expanded="false" />
+            <element signature="e#4535#4536#0" expanded="false" />
+            <element signature="e#4604#4605#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/ProblemDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/top/tosim/actrainer/dao/ContestDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        <state relative-caret-position="194">
+          <caret line="45" column="83" lean-forward="false" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
+          <folding>
+            <element signature="e#1528#1529#0" expanded="false" />
+            <element signature="e#1622#1623#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ProblemController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ContestDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="675">
+          <caret line="348" column="0" lean-forward="false" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#trim#0;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#trim#0;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#trim#0;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#trim#0;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#trim#0;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#trim#0;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#trim#1;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#trim#1;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#trim#1;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#trim#1;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#trim#1;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#trim#1;n#insert#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#where#0;n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#where#0;n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#where#0;n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#where#0;n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#where#0;n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#where#0;n#select#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#where#0;n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#where#0;n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#where#0;n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#where#0;n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#where#0;n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#where#0;n#select#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#trim#0;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#trim#0;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#trim#0;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#trim#0;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#trim#0;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#trim#0;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#trim#1;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#trim#1;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#trim#1;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#trim#1;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#trim#1;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#trim#1;n#insert#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#set#0;n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#set#0;n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#set#0;n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#set#0;n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#set#0;n#update#0;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#5;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#6;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#7;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#8;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#9;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#10;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#11;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#12;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#13;n#trim#0;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#5;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#6;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#7;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#8;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#9;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#10;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#11;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#12;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#13;n#trim#1;n#insert#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#2;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#0;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#1;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#2;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#3;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#4;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#5;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#6;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#7;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#8;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#9;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#10;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#11;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#if#12;n#set#0;n#update#3;n#mapper#0;n#!!top" expanded="false" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" expanded="false" />
+            <marker date="1511683131521" expanded="false" signature="825:852" ph="insert into contest_problem... " />
+            <marker date="1511683131521" expanded="false" signature="1919:2637" ph="select from contest" />
+            <marker date="1511683131521" expanded="false" signature="1919:2661" ph="select from contest" />
+            <marker date="1511683131521" expanded="false" signature="2804:2836" ph="select from contest" />
+            <marker date="1511683131521" expanded="false" signature="3603:3706" ph="select from contest" />
+            <marker date="1511683131521" expanded="false" signature="3792:3849" ph="delete from " />
+            <marker date="1511683131521" expanded="false" signature="3981:4207" ph="insert into contest... " />
+            <marker date="1511683131521" expanded="false" signature="5326:5771" ph="update conte... " />
+            <marker date="1511683131521" expanded="false" signature="5874:6107" ph="update conte... " />
+            <marker date="1511683131521" expanded="false" signature="8612:8776" ph="select count... contest_problem" />
+            <marker date="1511683131521" expanded="false" signature="8833:9022" ph="select count... contest_problem" />
+            <marker date="1511683131521" expanded="false" signature="8838:9022" ph="update conte... " />
+            <marker date="1511683131521" expanded="false" signature="9139:10480" ph="update edite... " />
+            <marker date="1511683131521" expanded="false" signature="10577:10732" ph="select count... contest_problem" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ProblemDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="400">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionPageSelectDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/SubmissionDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="66" />
+        <state relative-caret-position="700">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProblemDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ContestDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="185" column="11" lean-forward="true" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
+        <state relative-caret-position="275">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
           <folding>
-            <marker date="1511609620366" expanded="true" signature="2131:2163" ph="select count... problem" />
-            <marker date="1511609620366" expanded="true" signature="2587:2938" ph="select from problem" />
-            <marker date="1511609620366" expanded="true" signature="2587:2981" ph="select from problem" />
-            <marker date="1511609620366" expanded="true" signature="3057:3187" ph="select from problem" />
-            <marker date="1511609620366" expanded="true" signature="3299:3402" ph="select from problem" />
-            <marker date="1511609620366" expanded="true" signature="3488:3545" ph="delete from " />
-            <marker date="1511609620366" expanded="true" signature="3636:4283" ph="insert into problem... " />
-            <marker date="1511609620366" expanded="true" signature="6742:8076" ph="update probl... " />
-            <marker date="1511609620366" expanded="true" signature="8179:8854" ph="update probl... " />
-            <marker date="1511609620366" expanded="true" signature="8968:10421" ph="update probl... " />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SubmissionDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="52" column="53" lean-forward="false" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+        <state relative-caret-position="2838">
+          <caret line="145" column="71" lean-forward="false" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="71" />
           <folding>
             <element signature="e#3091#3095#0" expanded="true" />
             <element signature="e#3943#3947#0" expanded="true" />
@@ -1425,55 +1197,403 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/SessionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1127#1141#0" expanded="true" />
+            <element signature="e#1859#1876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/SubmissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1459#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/ContestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1044#1061#0" expanded="true" />
+            <element signature="method#updateContestProblem#0;class#ContestService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SessionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="method#login#0;class#SessionController#0" expanded="false" />
+            <element signature="method#logout#0;class#SessionController#0" expanded="false" />
+            <marker date="1511685503966" expanded="false" signature="1371:1385" ph="&lt;~&gt;" />
+            <marker date="1511685503966" expanded="false" signature="2245:2262" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+          <folding>
+            <element signature="method#getUserTotalCount#0;class#UserController#0" expanded="false" />
+            <element signature="method#getUserRankList#0;class#UserController#0" expanded="false" />
+            <element signature="method#getUserById#0;class#UserController#0" expanded="false" />
+            <element signature="method#updateUserById#0;class#UserController#0" expanded="false" />
+            <element signature="method#regist#0;class#UserController#0" expanded="false" />
+            <marker date="1511687347734" expanded="false" signature="2145:2158" ph="&lt;~&gt;" />
+            <marker date="1511687347734" expanded="false" signature="2806:2822" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ProblemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="57" column="71" lean-forward="false" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="71" />
+          <folding>
+            <element signature="method#getProblem#0;class#ProblemController#0" expanded="false" />
+            <element signature="method#getProblemList#0;class#ProblemController#0" expanded="false" />
+            <element signature="method#getProblemTotalCount#0;class#ProblemController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/SubmissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="66" column="91" lean-forward="false" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="91" />
+          <folding>
+            <element signature="method#getSubmissionTotalCount#0;class#SubmissionController#0" expanded="false" />
+            <marker date="1511685845242" expanded="false" signature="2521:2537" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Contest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/Submission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/UserPageSelectDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/ContestPageSelectDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/SubmissionPageSelectDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/PageSelectDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/ProblemPageSelectDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dto/PicConfirmData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="115" column="21" lean-forward="false" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/WebAppInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/accounts.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/ProblemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/init/OJWorkerInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/ContestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="129" column="50" lean-forward="false" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="50" />
+        <state relative-caret-position="169">
+          <caret line="111" column="26" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1148#1165#0" expanded="true" />
-            <element signature="e#2178#2194#0" expanded="true" />
-            <element signature="e#3402#3418#0" expanded="true" />
-            <element signature="e#4877#4893#0" expanded="true" />
+            <marker date="1511686212241" expanded="false" signature="2494:2510" ph="&lt;~&gt;" />
+            <marker date="1511686212241" expanded="false" signature="3784:3800" ph="&lt;~&gt;" />
+            <marker date="1511686212241" expanded="false" signature="5475:5491" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/ContestDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/global.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/RootConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="29" column="81" lean-forward="false" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ContestDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProblemDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="284" column="46" lean-forward="true" selection-start-line="284" selection-start-column="46" selection-end-line="284" selection-end-column="46" />
+        <state relative-caret-position="5425">
+          <caret line="217" column="11" lean-forward="false" selection-start-line="217" selection-start-column="11" selection-end-line="217" selection-end-column="11" />
           <folding>
-            <element signature="e#2320#2324#0" expanded="true" />
-            <element signature="e#2417#2421#0" expanded="true" />
-            <element signature="e#2478#2482#0" expanded="true" />
-            <element signature="e#2585#2589#0" expanded="true" />
-            <element signature="e#3205#3209#0" expanded="true" />
-            <element signature="e#3302#3306#0" expanded="true" />
-            <element signature="e#3363#3367#0" expanded="true" />
-            <element signature="e#3470#3474#0" expanded="true" />
-            <marker date="1511626746542" expanded="true" signature="825:852" ph="insert into contest_problem... " />
-            <marker date="1511626746542" expanded="true" signature="1918:2636" ph="select from contest" />
-            <marker date="1511626746542" expanded="true" signature="1918:2660" ph="select from contest" />
-            <marker date="1511626746542" expanded="true" signature="2803:2866" ph="select from contest" />
-            <marker date="1511626746542" expanded="true" signature="3633:3736" ph="select from contest" />
-            <marker date="1511626746542" expanded="true" signature="3822:3879" ph="delete from " />
-            <marker date="1511626746542" expanded="true" signature="4011:4237" ph="insert into contest... " />
-            <marker date="1511626746542" expanded="true" signature="5356:5801" ph="update conte... " />
-            <marker date="1511626746542" expanded="true" signature="5904:6137" ph="update conte... " />
-            <marker date="1511626746542" expanded="true" signature="8595:8750" ph="select count... contest_problem" />
-            <marker date="1511626746542" expanded="true" signature="8814:8996" ph="select count... contest_problem" />
-            <marker date="1511626746542" expanded="true" signature="8823:8996" ph="update conte... " />
+            <marker date="1511609620366" expanded="true" signature="2131:2163" ph="select count... problem" />
+            <marker date="1511609620366" expanded="true" signature="2587:2938" ph="select from problem" />
+            <marker date="1511609620366" expanded="true" signature="2587:2981" ph="select from problem" />
+            <marker date="1511609620366" expanded="true" signature="3057:3187" ph="select from problem" />
+            <marker date="1511609620366" expanded="true" signature="3299:3402" ph="select from problem" />
+            <marker date="1511609620366" expanded="true" signature="3488:3545" ph="delete from " />
+            <marker date="1511609620366" expanded="true" signature="3636:4283" ph="insert into problem... " />
+            <marker date="1511609620366" expanded="true" signature="6742:8076" ph="update probl... " />
+            <marker date="1511609620366" expanded="true" signature="8179:8854" ph="update probl... " />
+            <marker date="1511609620366" expanded="true" signature="8968:10421" ph="update probl... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/redao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/entity/reentity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/remapper/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="34" column="75" lean-forward="false" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="212" column="47" lean-forward="true" selection-start-line="212" selection-start-column="47" selection-end-line="212" selection-end-column="47" />
+          <folding>
+            <marker date="1511769992563" expanded="true" signature="2140:2203" ph="update user " />
+            <marker date="1511769992563" expanded="true" signature="2256:2460" ph="update user " />
+            <marker date="1511769992563" expanded="true" signature="2594:2869" ph="select from problem" />
+            <marker date="1511769992563" expanded="true" signature="3009:3038" ph="select count... user" />
+            <marker date="1511769992563" expanded="true" signature="3238:3359" ph="select from user" />
+            <marker date="1511769992563" expanded="true" signature="3471:3570" ph="select from user" />
+            <marker date="1511769992563" expanded="true" signature="3656:3710" ph="delete from " />
+            <marker date="1511769992563" expanded="true" signature="3798:4273" ph="insert into user... " />
+            <marker date="1511769992563" expanded="true" signature="6242:7261" ph="update user " />
+            <marker date="1511769992563" expanded="true" signature="7361:7875" ph="update user " />
+            <marker date="1511769992563" expanded="true" signature="7819:7875" ph="update user " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/tosim/actrainer/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1201">
+          <caret line="43" column="85" lean-forward="false" selection-start-line="43" selection-start-column="85" selection-end-line="43" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+            <element signature="e#2202#2218#0" expanded="true" />
           </folding>
         </state>
       </provider>

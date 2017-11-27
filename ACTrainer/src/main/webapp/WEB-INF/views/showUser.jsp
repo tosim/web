@@ -12,9 +12,12 @@
 </head>
 <body>
 ${user.userName}
-<FORM action="/sessions" method="post">
-    <input name="_method" value="delete"/><br>
+<FORM action="/files/pic" method="post" enctype="multipart/form-data">
+    <%--<input name="fileName"/><br>--%>
+    <input name="userIcon" type="file"/>
+    <%--<input name="userIcon" type="file"/>--%>
     <input type="submit" value="提交"/><br>
 </FORM>
+<img src="${sessionScope.iconPath}">
 </body>
 </html>

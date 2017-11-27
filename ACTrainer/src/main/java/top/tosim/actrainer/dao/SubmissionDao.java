@@ -9,23 +9,32 @@ import java.util.List;
 import java.util.Map;
 
 public interface SubmissionDao {
+    //用于带参数的分页查询
     List<Map<String, Object>> selectPartByPage(SubmissionPageSelectDto pageSelectDto);
+
+    //用于带参数的分页查询的总数
     Integer selectTotalCount(SubmissionPageSelectDto pageSelectDto);
 
-    int deleteByPrimaryKey(Integer id);
-
+    //插入
     int insert(Submission record);
 
+    //插入，排除null字段
     int insertSelective(Submission record);
 
-    Submission selectByPrimaryKey(Integer id);
-
+    //更新，排除null字段
     int updateByPrimaryKeySelective(Submission record);
 
-    int updateByPrimaryKey(Submission record);
-
+    //根据oj和runid查询提交
     Submission selectByOJAndRealRunId(String Oj, Integer realRunId);
 
+    //根据用户id查询ac提交数
     int selectAcCountByUser(Integer userId);
+
+    //根据用户id查询非ac提交数
     int selectFailCountByUser(Integer userId);
+
+    //not used
+    int deleteByPrimaryKey(Integer id);
+    int updateByPrimaryKey(Submission record);
+    Submission selectByPrimaryKey(Integer id);
 }

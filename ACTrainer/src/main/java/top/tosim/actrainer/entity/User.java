@@ -13,8 +13,36 @@ public class User {
 
     private String email;
 
+    private Integer gender;
+    private String icon;
+    private String description;
+
     private Integer acCount;
     private Integer failCount;
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Integer getAcCount() {
         return acCount;
