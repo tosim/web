@@ -10,9 +10,7 @@
     <result column="price" jdbcType="REAL" property="price" />
     <result column="place" jdbcType="VARCHAR" property="place" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
-
     <association property="user" javaType="top.tosim.eqmanager.entity.User" select="top.tosim.eqmanager.dao.UserDao.selectByPrimaryKey" column="user_id"/>
-
   </resultMap>
   <sql id="Base_Column_List">
     id, name, description, code, add_time, price, place, user_id
